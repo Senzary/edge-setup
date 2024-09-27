@@ -79,11 +79,11 @@ sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $POSTGRES
 
 # Step 12: Download ThingsBoard Edge
 echo "Downloading ThingsBoard Edge 3.6.4..."
-wget https://github.com/thingsboard/thingsboard-edge/releases/download/v3.6.4/tb-edge-3.6.4.deb > /dev/null 2>&1 && progress_bar || { echo "Failed to download ThingsBoard Edge"; exit 1; }
+wget https://dist.thingsboard.io/tb-edge-3.6.4pe.deb > /dev/null 2>&1 && progress_bar || { echo "Failed to download ThingsBoard Edge"; exit 1; }
 
 # Step 13: Install ThingsBoard Edge
 echo "Installing ThingsBoard Edge 3.6.4..."
-sudo dpkg -i tb-edge-3.6.4.deb > /dev/null 2>&1 && progress_bar || { echo "Failed to install ThingsBoard Edge"; exit 1; }
+sudo dpkg -i tb-edge-3.6.4pe.deb > /dev/null 2>&1 && progress_bar || { echo "Failed to install ThingsBoard Edge"; exit 1; }
 
 # Step 14: Wait for the configuration file to exist
 echo "Waiting for the configuration file to be available..."
